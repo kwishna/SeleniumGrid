@@ -1,0 +1,28 @@
+{
+  "capabilities":
+      [
+        {
+         "deviceName": "Galaxy",
+          "browserName": "chrome",
+          "version":"6.0",
+          "maxInstances": 2,
+          "platform":"Android"
+        }
+      ],
+  "configuration":
+  {
+    "cleanUpCycle":3000,
+    "timeout":30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "__comment": "url, host, and port are about appium server. host should not contain http",
+    "url": "http://172.30.0.1/wd/hub",
+    "host": "172.30.0.1",
+    "port": 4723,
+    "maxSession": 2,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": 4444,
+    "hubHost": "172.30.0.1",
+    "nodeStatusCheckTimeout": 5000
+  }
+}

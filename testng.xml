@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Grid" parallel="tests">
+
+  <test name="yatraTest">
+    <classes>
+      <class name="selenium_grid.grid.Node1"/>
+      <class name="selenium_grid.grid.SeleniumGrid"/>
+    </classes>
+  </test> <!-- Test -->
+  
+   <test name="amazonTest">
+    <classes>
+      <class name="selenium_grid.grid.Node2"/>
+      <class name="selenium_grid.grid.SeleniumGrid"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test thread-count="5" name="Test1">
+
+        <parameter name="browser" value="chrome"/>
+        <parameter name="port" value="5556"/>
+  		<classes>
+            <class name="SeleniumGrid"/>
+  		</classes>
+  </test> <!-- Test -->
+  
+	<test thread-count="5" name="Test2">
+
+        <parameter name="browser" value="firefox"/>
+        <parameter name="port" value="5555"/>
+  		<classes>
+            <class name="SeleniumGrid"/>
+  		</classes>
+  </test>
+  
+</suite> <!-- Suite -->
